@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: rgb(228, 235, 247);
+}
+
+/* .header h1{
+  font-family: auto;
+  font-style: italic;
+  color: darkblue;
+} */
+
+.suggest p{
+  font-style: italic;
+  font-size: x-large;
+  color: cornflowerblue;
+}
+.suggest{
+  margin: -20;
+}
+::selection {
+  background: blue;
+  color: azure;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 500px;
+  /* background-color: #fff; */
+  background-color: #d6dfef;
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  max-height: 600px;
+
+  /* bgcolor -->#d6dfef 70% vallagse */
+ 
+}
+
+.wrapper .title-logo {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.greetings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 25px;
+  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+  border-radius: 11px;
+  color: white;
+}
+
+.imglogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slidecontrol {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0px 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+}
+
+.slidecontrol .slide {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slidecontrol label.signup {
+  color: #000;
+}
+.slidecontrol .slidertab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 15px;
+  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#signup:checked ~ .slidertab {
+  left: 50%;
+}
+
+#signup:checked ~ label.signup {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login {
+  color: #000;
+}
+
+#login:checked ~ label.signup {
+  color: #000;
+}
+#login:checked ~ label.login {
+  cursor: default;
+  user-select: none;
+}
+.wrapper .formcontainer{
+  width: 100%;
+  overflow: hidden;
+}
+
+.formcontainer .forminner{
+  display: flex;
+  width: 200%;
+}
+
+.formcontainer .forminner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.forminner form.field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.forminner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.forminner form .field input:focus{
+  border-color: #1a75ff;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.forminner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder{
+  color: #1a75ff;
+}
+
+/* .form-inner form .pass-link{
+  margin-top: 5px;
+} */
+.forminner form .pass-link{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+.forminner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.forminner form .pass-link a,
+.forminner form .signup-link a{
+  color: #1a75ff;
+  text-decoration: none;
+}
+
+.forminner form .pass-link a:hover,
+.forminner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  
+}
+
+form .btn .butn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right,#003366,#004080,#0059b3
+, #0073e6);
+  border-radius: 15px;
+  transition: all 0.4s ease;;
+}
+
+form .btn:hover .butn-layer{
+  left: 0;
+}
+
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.field{
+  height: 44px;
+}
+
+.remember{
+  font-size: 17px;
+  font-weight: 500;
+}
+
